@@ -22,5 +22,11 @@ public class Test {
         int a = 5*5;
         Assert.assertEquals(a,25);
     }
+    @org.testng.annotations.Test
+    public static void multiply3umethod()
+    {
+        int a = 15*5;
+        Assert.assertEquals(a,75);
+    }
 
 }
