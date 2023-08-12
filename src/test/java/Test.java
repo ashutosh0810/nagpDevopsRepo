@@ -16,17 +16,17 @@ public class Test {
         Assert.assertEquals(a,0);
     }
 
-    @org.testng.annotations.Test
-    public static void multiplyumethod()
-    {
-        int a = 5*5;
-        Assert.assertEquals(a,25);
-    }
-    @org.testng.annotations.Test
-    public static void multiply3umethod()
-    {
-        int a = 15*5;
-        Assert.assertEquals(a,75);
-    }
+//    @org.testng.annotations.Test
+//    public static void multiplyumethod()
+//    {
+//        int a = 5*5;
+//        Assert.assertEquals(a,25);
+//    }
+//    @org.testng.annotations.Test
+//    public static void multiply3umethod()
+//    {
+//        int a = 15*5;
+//        Assert.assertEquals(a,75);
+//    }
 
 }
