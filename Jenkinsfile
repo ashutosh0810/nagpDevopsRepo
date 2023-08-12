@@ -13,7 +13,7 @@ pipeline {
             }
         }
 
-        stage('Test') {
+        stage('build') {
             steps {
                 script {
                     // Maven build and test
