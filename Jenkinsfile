@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     // Maven build and test
-                    sh 'mvn clean test'
+                    bat 'mvn clean test'
                 }
             }
         }
@@ -28,7 +28,7 @@ pipeline {
                 script {
                     // SonarQube scan
                     withSonarQubeEnv('test_sonar') {
-                        sh 'mvn sonar:sonar'
+                        bat 'mvn sonar:sonar'
                     }
                 }
             }
