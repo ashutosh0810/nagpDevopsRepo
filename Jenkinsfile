@@ -47,15 +47,23 @@ pipeline {
                         expression { currentBuild.resultIsBetterOrEqualTo('SUCCESS') }
                     }
                     steps {
-                        script {
-                            def server = Artifactory.server('nagp@jfrog')
-                            def rtMaven = Artifactory.newMavenBuild()
-                            //rtMaven.tool = 'Maven'  // Name of Maven installation on Jenkins
-                            rtMaven.deployer releaseRepo:'libs-release-local', snapshotRepo:'libs-snapshot-local', server: server
+                        rtMavenDeployer(
+                           id: 'deployer',
+                           serverId: 'nagp@jfrog',
+                           releaseRepo: 'sampleRepo',
+                           snapshotRepo: 'sampleRepo'
+                           )
+                        rtMavenRun(
+                           pom: 'pom.xml',
+                           goals: 'clean install',
+                           deployerId: 'deployer'
+                           )
 
-                            // Run Maven with Artifactory integration
-                            rtMaven.run pom: 'pom.xml', goals: 'clean install -Dmaven.test.skip=true'
-                        }
+                        rtpublishBuildInfo(
+                         serverId: 'nagp@jfrog'
+                        )
+
+
                     }
                 }
 
