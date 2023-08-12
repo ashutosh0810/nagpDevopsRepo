@@ -1,7 +1,9 @@
 pipeline {
     agent any
 
-
+     triggers {
+            cron('* * * * *')
+        }
     stages {
         stage('Checkout from GitHub') {
             steps {
