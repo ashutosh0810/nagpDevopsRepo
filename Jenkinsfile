@@ -50,8 +50,8 @@ pipeline {
                         rtMavenDeployer(
                            id: 'deployer',
                            serverId: 'nagp@jfrog',
-                           releaseRepo: 'sampleRepo',
-                           snapshotRepo: 'sampleRepo'
+                           releaseRepo: '1234',
+                           snapshotRepo: '1234'
                            )
                         rtMavenRun(
                            pom: 'pom.xml',
