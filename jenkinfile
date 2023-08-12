@@ -1,19 +1,15 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven_3_6_3'  // Replace with your Maven version name configured in Jenkins
-        jdk 'jdk17'  // Replace with your JDK name or version configured in Jenkins
-    }
+
 
     stages {
         stage('Checkout from GitHub') {
             steps {
-                // Checkout from the provided Git repository and branch
+                // Checkout from the Git repository and branch
                 git(
                     url: 'https://github.com/ashutosh0810/nagpDevopsRepo.git',
-                    branch: 'master',
-
+                    branch: 'master'
                 )
             }
         }
@@ -22,7 +18,7 @@ pipeline {
             steps {
                 script {
                     // Maven build and test
-                    sh 'mvn clean verify'
+                    sh 'mvn clean test'
                 }
             }
         }
