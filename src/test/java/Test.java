@@ -29,4 +29,9 @@ public class Test {
         Assert.assertEquals(a,75);
     }
 
+    @org.testng.annotations.Test
+    public static void testString()
+    {
+        Assert.assertEquals("ashutosh","ashutosh");
+    }
 }
