@@ -16,14 +16,23 @@ pipeline {
             }
         }
 
-        stage('Build & Test') {
+        stage('Test') {
             steps {
                 script {
                     // Maven build and test
-                    bat 'mvn clean test'
+                    bat 'mvn clean '
                 }
             }
         }
+
+           stage('Test') {
+                    steps {
+                        script {
+                            // Maven build and test
+                            bat 'mvn test'
+                        }
+                    }
+                }
 
         stage('SonarQube Analysis') {
             steps {
