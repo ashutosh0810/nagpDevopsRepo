@@ -2,7 +2,7 @@ pipeline {
     agent any
 
      triggers {
-            cron('* * * * *')
+             pollSCM('H/5 * * * *')
         }
     stages {
         stage('Checkout from GitHub') {
