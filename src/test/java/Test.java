@@ -1,34 +1,36 @@
-import org.nagp3.Main;
-import org.testng.Assert;
+import org.nagp3.CalculatorApp;
+import org.testng.annotations.BeforeClass;
+import static org.testng.Assert.assertEquals;
 
 public class Test {
-    @org.testng.annotations.Test
-    public static void addmethod() {
-        int a = 5 + 5;
-        Assert.assertEquals(a, 10);
+
+    private CalculatorApp calculator;
+
+    @BeforeClass
+    public void setUp() {
+        calculator = new CalculatorApp();
     }
 
     @org.testng.annotations.Test
-    public static void deletemethod() {
-        int a = 10 - 5;
-        Assert.assertEquals(a, 5);
+    public void testAdd() {
+        assertEquals(calculator.add(2, 3), 5);
+        assertEquals(calculator.add(-2, 1), -1);
     }
 
     @org.testng.annotations.Test
-    public static void multiplyumethod() {
-        int a = 5 * 5;
-        Assert.assertEquals(a, 25);
+    public void testSubtract() {
+        assertEquals(calculator.subtract(3, 2), 1);
+        assertEquals(calculator.subtract(-1, 2), -3);
     }
 
     @org.testng.annotations.Test
-    public static void multiply3umethod() {
-        int a = 15 * 5;
-        Assert.assertEquals(a, 75);
+    public void testmutiply() {
+        assertEquals(calculator.subtract(3, 2), 1);
+        assertEquals(calculator.subtract(-1, 2), -3);
     }
-
-
     @org.testng.annotations.Test
-    public static void testM() {
-        Assert.assertEquals(Main.method("test"), "test");
+    public void testdivide() {
+        assertEquals(calculator.subtract(3, 2), 1);
+        assertEquals(calculator.subtract(-1, 2), -3);
     }
 }

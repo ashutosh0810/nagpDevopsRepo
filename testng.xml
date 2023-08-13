@@ -4,7 +4,7 @@
     <test verbose="2" preserve-order="true" name="nagpDevops">
         <classes>
             <class name="Test"/>
-                <class name="org.nagp3.Main"/>
+                <class name="org.nagp3.CalculatorApp"/>
 
         </classes>
     </test>
