@@ -27,8 +27,6 @@
 
     <build>
         <plugins>
-
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -120,4 +118,12 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>IN-PG02DGBT-releases</name>
+            <url>http://localhost:8081/artifactory/libs-release-local</url>
+        </repository>
+    </distributionManagement>
 </project>
