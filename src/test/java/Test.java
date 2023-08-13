@@ -25,12 +25,12 @@ public class Test {
 
     @org.testng.annotations.Test
     public void testmutiply() {
-        assertEquals(calculator.subtract(3, 2), 1);
-        assertEquals(calculator.subtract(-1, 2), -3);
+        assertEquals(calculator.multiply(3, 2), 6);
+        assertEquals(calculator.multiply(-1, 2), -2);
     }
     @org.testng.annotations.Test
     public void testdivide() {
-        assertEquals(calculator.subtract(3, 2), 1);
-        assertEquals(calculator.subtract(-1, 2), -3);
+        assertEquals(calculator.divide(3, 3), 1);
+        assertEquals(calculator.divide(-2, 2), -1);
     }
 }
