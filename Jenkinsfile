@@ -60,7 +60,7 @@ pipeline {
                            )
 
                         rtpublishBuildInfo(
-                         serverId: 'nagp@jfrog',
+                           serverId: 'nagp@jfrog',
                         )
 
 
@@ -73,7 +73,6 @@ pipeline {
         always {
             // Always archive the artifacts and TestNG results
             archiveArtifacts artifacts: '**/target/*.jar', allowEmptyArchive: true
-
         }
     }
 }
