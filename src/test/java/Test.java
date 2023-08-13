@@ -39,7 +39,7 @@ public class Test  extends Main {
     @org.testng.annotations.Test
     public static void testM()
     {
-        Assert.assertEquals(method(),"test");
+        Assert.assertEquals(method("test"),"test");
 
     }
 }

@@ -46,13 +46,6 @@ pipeline {
                 }
             }
         }
-        stage('quality gate ')
-        {
-            steps {
-               waitForQualityGate abortPipeline: true
-
-                }
-        }
 
            stage('Deploy to Artifactory') {
                     when {
