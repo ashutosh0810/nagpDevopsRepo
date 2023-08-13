@@ -60,8 +60,8 @@ pipeline {
                            )
 
                         rtpublishBuildInfo(
-                           serverId: 'nagp@jfrog',
-                        )
+                           serverId: 'nagp@jfrog'
+                           )
 
 
                     }
