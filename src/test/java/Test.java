@@ -1,6 +1,7 @@
+import org.nagp3.Main;
 import org.testng.Assert;
 
-public class Test {
+public class Test  extends Main {
 
     @org.testng.annotations.Test
     public static void addmethod()
@@ -33,5 +34,12 @@ public class Test {
     public static void testString()
     {
         Assert.assertEquals("ashutosh","ashutosh");
+    }
+
+    @org.testng.annotations.Test
+    public static void testM()
+    {
+        Assert.assertEquals(method(),"test");
+
     }
 }
