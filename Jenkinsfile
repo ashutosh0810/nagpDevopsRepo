@@ -29,7 +29,7 @@ pipeline {
             }
         }
 
-           stage('Test') {
+           stage('test the code') {
                     steps {
                         script {
                             // Maven build and test

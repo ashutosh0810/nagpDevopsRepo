@@ -2,7 +2,7 @@ import org.nagp3.CalculatorApp;
 import org.testng.annotations.BeforeClass;
 import static org.testng.Assert.assertEquals;
 
-public class Test {
+public class TestCal {
 
     private CalculatorApp calculator;
 
