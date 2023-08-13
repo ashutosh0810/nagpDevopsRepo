@@ -50,8 +50,8 @@ pipeline {
                         rtMavenDeployer(
                            id: 'deployer',
                            serverId: 'nagp@jfrog',
-                           releaseRepo: '1234',
-                           snapshotRepo: '1234'
+                           releaseRepo: 'libs-release-local/',
+                           snapshotRepo: 'libs-release-local/'
                            )
                         rtMavenRun(
                            pom: 'pom.xml',
@@ -61,7 +61,7 @@ pipeline {
 
                         rtpublishBuildInfo(
                          serverId: 'nagp@jfrog',
-                         buildName: 'my-app',
+                         buildName: 'libs-release-local',
                         )
 
 
