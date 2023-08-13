@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+            maven "MAVEN_HOME"
+
+        }
 
     stages {
         stage('Checkout from GitHub') {
@@ -57,11 +61,11 @@ pipeline {
                            pom: 'pom.xml',
                            goals: 'clean install',
                            deployerId: 'deployer'
-                           )
+                        )
 
                         rtpublishBuildInfo(
                            serverId: 'nagp@jfrog'
-                           )
+                        )
 
 
                     }
