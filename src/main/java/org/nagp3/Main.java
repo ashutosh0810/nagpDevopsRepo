@@ -1,8 +1,8 @@
 package org.nagp3;
 
 public class Main {
-
-    private static String str = null;
+    private Main() {
+    }
 
     public static String method(String str)
     {
