@@ -30,6 +30,6 @@ public class TestCal {
     }
     @org.testng.annotations.Test
     public void testdivide() {
-        Assert.assertEquals(calculator.add(2,2),1);
+        Assert.assertEquals(calculator.divide(2,2),1);
     }
 }
