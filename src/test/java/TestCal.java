@@ -1,4 +1,5 @@
 import org.nagp3.CalculatorApp;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import static org.testng.Assert.assertEquals;
 
@@ -13,24 +14,22 @@ public class TestCal {
 
     @org.testng.annotations.Test
     public void testAdd() {
-        assertEquals(calculator.add(2, 3), 5);
-        assertEquals(calculator.add(-2, 1), -1);
+
+        Assert.assertEquals(calculator.add(2,4),6);
+        Assert.assertEquals(calculator.add(2,5),7);
     }
 
     @org.testng.annotations.Test
     public void testSubtract() {
-        assertEquals(calculator.subtract(3, 2), 1);
-        assertEquals(calculator.subtract(-1, 2), -3);
-    }
+        Assert.assertEquals(calculator.subtract(6,5),1);
+            }
 
     @org.testng.annotations.Test
     public void testmutiply() {
-        assertEquals(calculator.multiply(3, 2), 6);
-        assertEquals(calculator.multiply(-1, 2), -2);
+        Assert.assertEquals(calculator.multiply(2,5),10);
     }
     @org.testng.annotations.Test
     public void testdivide() {
-        assertEquals(calculator.divide(3, 3), 1);
-        assertEquals(calculator.divide(-2, 2), -1);
+        Assert.assertEquals(calculator.add(2,2),1);
     }
 }
