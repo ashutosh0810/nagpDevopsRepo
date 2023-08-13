@@ -6,6 +6,10 @@ public class Main {
 
     public static String method(String str)
     {
-        return str;
+        if(str!=null)
+        {
+            return str;
+        }
+        return "";
     }
 }
