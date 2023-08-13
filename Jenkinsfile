@@ -42,8 +42,16 @@ pipeline {
                     withSonarQubeEnv('test_sonar') {
                         bat 'mvn sonar:sonar'
                     }
+
                 }
             }
+        }
+        stage('quality gate ')
+        {
+            steps {
+               waitForQualityGate abortPipeline: true
+
+                }
         }
 
            stage('Deploy to Artifactory') {
