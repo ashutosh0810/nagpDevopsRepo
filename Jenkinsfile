@@ -62,8 +62,7 @@ pipeline {
                            goals: 'clean install',
                            deployerId: 'deployer'
                         )
-
-                        rtpublishBuildInfo(
+                        rtPublishBuildInfo(
                            serverId: 'nagp@jfrog'
                         )
 
