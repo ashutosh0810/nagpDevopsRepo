@@ -43,7 +43,7 @@ pipeline {
                 script {
                     // SonarQube scan
                     withSonarQubeEnv('test_sonar') {
-                        bat 'mvn sonar:sonar'
+                        bat 'mvn clean test sonar:sonar'
                     }
 
                 }
